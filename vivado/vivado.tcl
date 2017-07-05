@@ -125,7 +125,7 @@ file mkdir reports
 # ------------------------------------------------------------
 # synthesize desing
 # ------------------------------------------------------------
-# Tried -part xc7v2000tflg1925-2 instead of -part xc7v2000t-1flg1925 -> the odd-even sort doesnt't work perfectly but close enough 
+# -part xc7v2000tflg1925-2 instead of -part xc7v2000t-1flg1925
 synth_design -top ${TOPLEVEL} -keep_equivalent_registers -part xc7v2000tflg1925-2 -include_dirs ${PROFPGA_ROOT}/hdl/generic_hdl -include_dirs ${PROFPGA_ROOT}/hdl/mmi64 -include_dirs ${PROFPGA_ROOT}/hdl/profpga
 write_checkpoint -force ./output/${TOPLEVEL}_synthesized.dcp
 report_utilization -file ./reports/${TOPLEVEL}_utilization_synth.rpt
