@@ -32,7 +32,7 @@ set_max_delay 10 -from [all_registers -clock clk_p[2] -clock_pins ] -to [all_reg
 set_max_delay 10 -from [all_registers -clock clk_p[3] -clock_pins ] -to [all_registers -clock clk_p[0] -data_pins ] -datapath_only -quiet
 set_max_delay 10 -from [all_registers -clock clk_p[4] -clock_pins ] -to [all_registers -clock clk_p[0] -data_pins ] -datapath_only -quiet
 
-#set_property DONT_TOUCH false [get_cells *.U_CLKSYNC/clk_pad_reg]
+#set_property KEEP false [get_cells *.U_CLKSYNC/clk_pad_reg]
 set_false_path -to [get_cells *.U_CLKSYNC/reset_rEXT_reg[*] ]
 
 ######################################################################################
