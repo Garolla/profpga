@@ -223,6 +223,9 @@ mmi64_error_t mmi64_main(int argc, char * argv[])
 
 		status = mmi64_regif_read_64(user_module, 0, 1, &rdata); //request_out(0)
 		CHECK(status);	
+		//Printing on terminal the output 
+		//For the LIM the actual data are the 26 LSBs -> convert the number seen on the terminal in binary, take the 26 left bits and convert them in decimal
+		//It's possible to fprintf on fout
 		printf("Read %d: %lld \n",i,(long long)rdata);
 		
 		i++;
